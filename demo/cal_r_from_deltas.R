@@ -8,7 +8,7 @@ setwd(paste0(code_root, "demo"))
 library(dplyr)
 library(readr)
 
-# assuming input/pars_est_run_main_analysis.txt exists
+# assuming output/pars_est_run_main_analysis.txt exists
 
 pars_est=read_tsv("../output/pars_est_run_main_analysis.txt") %>%
   mutate(r3=1/(1+(1-r12)/(exp(delta3)*r12)),
